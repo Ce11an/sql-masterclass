@@ -57,8 +57,8 @@ SELECT
   ROUND(AVG(transactions.quantity)::NUMERIC, 2) AS average_quantity
 FROM trading.transactions
 WHERE transactions.ticker = 'BTC'
-GROUP BY txn_year, txn_type
-ORDER BY txn_year, txn_type;
+GROUP BY txn_year, transactions.txn_type
+ORDER BY txn_year, transactions.txn_type;
 
 /*
 
